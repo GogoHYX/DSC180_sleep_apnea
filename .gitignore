@@ -1,6 +1,7 @@
 data
 # IDE files
 .idea/
+*.iml
 .DS_Store
 # mac os file
 # Byte-compiled / optimized / DLL files
