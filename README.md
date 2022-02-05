@@ -8,7 +8,7 @@ In the home directory, running `python run.py --targets` builds the requisite fi
 
 1. `test-data`: loads test-data files from `test/testdata', cleans and saves them in `data/clean`.
 2. `features`: reads clean data files from `data/clean`, builds features, joins the files, and stores the columns of resulting dataframe in different files under `data/out`.
-3. `model`: trains the model and saves it under `results/` directory.
+3. `model`: trains the model and saves it under `results/` directory. **RUNNING THIS TAKES A WHILE FOR THE FIRST TIME BECAUSE OF THE IMPORT STATEMENT. AFTER THAT IT'S INSTANTANEOUS.**
 4. `test`: provides the functionality of above 3 targets combined.
 
 ### Directory Map
