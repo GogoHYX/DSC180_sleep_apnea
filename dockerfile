@@ -26,7 +26,7 @@ USER jovyan
 
 # RUN conda install -y scikit-learn
 
-RUN pip install --no-cache-dir os numpy pandas wfdb matplotlib PyWavelets
+RUN pip install --no-cache-dir os numpy pandas matplotlib sktime pickle-mixin
 
 # Override command to disable running jupyter notebook at launch
 # CMD ["/bin/bash"]
