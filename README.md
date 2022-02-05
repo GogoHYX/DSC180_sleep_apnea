@@ -47,3 +47,4 @@ In the home directory, running `python run.py --targets` builds the requisite fi
 7. `test/`: contains `testdata/` which can be populated by running the `create_test_data.py`.
 8. `dockerfile`: creates a container with the necessary libraries and packages to run all the scripts.
 9. `run.py`: running this script builds the requisite files.
+10. `submission.json`: contains the dockerhub-id for building the container and build-script command to build the targets.
