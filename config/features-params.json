@@ -1,4 +1,4 @@
 {
-    "feats": ["CYLINDERS","ENGINESIZE"],
-    "outfile": "data/temp/features-simple.csv"
+    "clean_data_dir": "data/clean",
+    "outpath": "data/out"
 }

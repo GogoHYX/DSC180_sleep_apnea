@@ -1,0 +1,6 @@
+
+{
+    "num_rows_per_file": 500,
+    "num_files": 10,
+    "path_to_testdata": "../../test/testdata"
+}
