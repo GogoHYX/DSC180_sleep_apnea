@@ -2,7 +2,7 @@ import sys
 
 sys.path.insert(0, '../')
 
-from helper_functions import split_X_y, read_data, train_split
+from ..helper_functions import split_X_y, read_data, train_split
 from sktime.classification.kernel_based import RocketClassifier
 import pickle
 
