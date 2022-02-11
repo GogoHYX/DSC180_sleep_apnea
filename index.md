@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Light Intensity on sleep quality
 
 You can use the [editor on GitHub](https://github.com/GogoHYX/DSC180_sleep_apnea/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
