@@ -8,7 +8,10 @@ The increase of artificial light exposure through the increased prevalence of te
 
 As the world undergoes technological advancement on an unprecedented scale, artificial light from man-made sources are becoming ever more prevalent. The extent of this anthropogenic increase in artificial light has become a pollutant, with extensive research showing both ecological and medical consequences. This is due to the importance of light from the sun on the survival and function of the majority of organisms and thus ecosystems on earth. These organisms have developed day/night cycles that cause physiological, behavioral, and metabolic changes which optimize function and are essential for survival. Artificial light interferes with these processes due to differences in wavelength, intensity, and timing from that of light with origins from the sun. A study of satellite images done in 2001, showed that artificial light at night (ALAN) affects 18.7% of global land area , through which roughly two thirds of the human population and 99% of humans living in the United States and the European Union, “live in areas where the night sky is above the threshold set for polluted status." The rapid development of technology and thus rapid increase in artificial light within the last two hundred years has undoubtedly had effects on the biological function of organisms around the world.
 
-![image](https://user-images.githubusercontent.com/46830657/156947468-01a1c61e-f3b3-4166-a34b-cbec47b72c7f.png) ![image](https://user-images.githubusercontent.com/46830657/156947503-b568d7ee-19e3-4cf8-ace8-3f69e21b3b25.png)
+
+A | B
+- | - 
+![image](https://user-images.githubusercontent.com/46830657/156947468-01a1c61e-f3b3-4166-a34b-cbec47b72c7f.png) | ![image](https://user-images.githubusercontent.com/46830657/156947503-b568d7ee-19e3-4cf8-ace8-3f69e21b3b25.png)
 
 
 
