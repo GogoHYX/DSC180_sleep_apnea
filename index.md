@@ -12,7 +12,7 @@ As the world undergoes technological advancement on an unprecedented scale, arti
 
 What is most concerning for the health of humans, however, is the ever increasing use of devices with light up displays such as phones, tv’s, and computers for entertainment, work, and communication. Currently, there are an estimated 16 billion mobile devices worldwide with many individuals spending over five hours a day looking at a screen. One biological mechanism that is affected by this increased exposure to artificial light in human beings is the circadian rhythm, through which the body undergoes changes during the night in preparation for sleep and changes during the day in preparation for activity. The circadian rhythm plays major roles in many “physiological processes, such as body temperature, blood pressure, hormone secretion, gene expression, and immune functions”, which all have some reliance on diurnal light patterns from the sun and thus the optimized function of these human body processes are impacted by stimulus from artificial sources of light. When light enters the eyes and is picked up by photosensitive ganglion cells, this information is then communicated to the suprachiasmatic nuclei of the hypothalamus, and then to other parts of the brain and body. 
 
-*insert brain image*
+ ![image](https://user-images.githubusercontent.com/46830657/156948045-9edc7794-e503-419d-9c6e-5693a9c71495.png)
 
 One result is that the brain experiences an increase in wakefulness and reduction in homeostatic sleep pressure in the presence of light through the suppression of melatonin, a hormone released by the pineal gland which facilitates sleep and the circadian rhythm. 
 As a result light exposure during unnatural times can detrimentally affect sleep, which is necessary for human health and function. Sleep deprivation or impairment can lead to many health issues such as impairment to cognition, metabolism, and immune response. This leads to the focus of this project, which is to determine the effects of light exposure on sleep quality.
@@ -23,7 +23,7 @@ The data used in this project comes from the Sueño Ancillary study done by The 
 ### Methods
 The outcome variable that we used for the data is sleep efficiency which is defined by the ratio between the duration of time the participant spent sleeping over the duration of time spent in bed for a given night. The sleep efficiency equation is shown below:
 
-*insert image here*
+![image](https://user-images.githubusercontent.com/46830657/156948066-09b1a1f8-c9bb-41da-8336-2f682d9a8e29.png)
 
 ### Documentations and Notes
 
