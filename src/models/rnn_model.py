@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 import matplotlib.pyplot as plt
 import numpy as np
@@ -50,11 +51,10 @@ class HCHS(Dataset):
         file = self.filenames[idx]
         file = os.path.join(data_dir, file)
         temp = pd.read_csv(open(file, 'r')).dropna()
-        X = temp.iloc[:, 6:10].values
-        y = temp.iloc[:, 11].apply(lambda x: HCHS.y_encode[x]).values
+        X = temp.iloc[:, 6:10].values.astype(np.float32)
+        y = temp.iloc[:, 11].apply(lambda x: HCHS.y_encode[x]).values.astype(np.float32)
         # X = temp.iloc[idx * sequence_length : (idx + 1) * sequence_length, 6:10].values
         # y = temp.iloc[idx * sequence_length:(idx + 1) * sequence_length, 11].apply(lambda x: HCHS.y_encode[x]).values
-
         return (X, y)
 
     def __len__(self):
@@ -100,8 +100,8 @@ class RNN(nn.Module):
 
 # metric
 def is_quality_sleep(lst):
-    sleep = torch.sum(lst == 0)
-    in_bed = torch.sum(lst == 1)
+    sleep = torch.sum(lst == 1)
+    in_bed = torch.sum(lst == 0)
     sleep_efficiency = sleep / (sleep + in_bed)
     return sleep_efficiency > 0.9
 
@@ -114,14 +114,17 @@ def train(train_loader, val_loader):
 
     avg_train_loss = []
     avg_val_loss = []
-    avg_train_acc = []
-    avg_val_acc = []
+    train_loss_lst = []
+    val_loss_lst = []
     best_val_score = float('inf')
     for e in range(num_epoch):
         print(f'start epoch {e}')
         for i, (X, y) in enumerate(train_loader):
+            print(i)
+            if X.numel() == 0:
+                continue
             X = X.to(device)
-            y = y.to(device)
+            y = y.long().to(device)
 
             output = model(X.float())
             # print('fc_out')
@@ -142,6 +145,7 @@ def train(train_loader, val_loader):
         # print('train loss:{0}, train accuracy{1}'.format(tl_item, train_acc))
         # print(avg_train_loss)
         train_loss = np.mean(avg_train_loss)
+        train_loss_lst.append(train_loss)
         print('train loss:{0}'.format(train_loss))
 
         total = 0
@@ -150,7 +154,7 @@ def train(train_loader, val_loader):
             b = 0
             for X, y in val_loader:
                 b += 1
-                X, y = X.to(device), y.to(device)
+                X, y = X.to(device), y.long().to(device)
                 output = model(X.float())
 
                 # predictions = torch.argmax(output.data, 1)
@@ -164,6 +168,7 @@ def train(train_loader, val_loader):
         # avg_val_acc.append(val_acc)
         # print('validation loss:{0}, validation accuracy{1}'.format(vl_item, val_acc))
         val_loss = np.mean(avg_val_loss)
+        val_loss_lst.append(val_loss)
         print('validation loss:{0}'.format(val_loss))
 
         with open(log_file_dir, 'a') as f:
@@ -177,12 +182,12 @@ def train(train_loader, val_loader):
             best_val_score = val_loss
             torch.save(model.state_dict(), os.path.join(log_dir, 'best_rnn_model.pt'))
 
-    ix = np.arange(len(avg_train_loss))
+    ix = np.arange(len(train_loss_lst))
     # change this for keeping scale
     plt.ylim(0, 2)
 
-    plt.plot(ix, avg_train_loss, label="training loss")
-    plt.plot(ix, avg_val_loss, label="validation loss")
+    plt.plot(ix, train_loss_lst, label="training loss")
+    plt.plot(ix, val_loss_lst, label="validation loss")
     plt.title('loss graph')
     plt.legend()
     plt.savefig(os.path.join(log_dir,"rnn_loss.png"))
@@ -209,9 +214,10 @@ def test(model, test_loader):
     cla_acc_lst = []
     with torch.no_grad():
         for X,y in test_loader:
-            X,y = X.to(device), y.to(device)
+            X,y = X.to(device), y.long().to(device)
             pred = model(X.float()).argmax(2)
             acc = np.mean((pred ==y).squeeze().detach().cpu().numpy())
+            # print(np.mean(is_quality_sleep(y).detach().cpu().numpy()))
             cla_acc = is_quality_sleep(pred) == is_quality_sleep(y)
             acc_lst.append(acc)
             cla_acc_lst.append(cla_acc.cpu())
@@ -224,18 +230,18 @@ def test(model, test_loader):
         f.write('test classification acc:{0}'.format(avg_cla_acc))
 
 
-def run():
+def run(): 
     train_loader, val_loader, test_loader = prepare_dataset()
     model = train(train_loader, val_loader)
     test(model, test_loader)
 
 
 if __name__ == '__main__':
-#     test
-#     train_loader, val_loader, test_loader = prepare_dataset()
-#     model = RNN().to(device)
-#     model.load_state_dict(torch.load(os.path.join(log_dir, 'best_rnn_model.pt')))
-#     test(model, test_loader)
-
     # run
-    run()
+    if len(sys.argv) > 1:
+        train_loader, val_loader, test_loader = prepare_dataset()
+        model = RNN().to(device)
+        model.load_state_dict(torch.load(os.path.join(log_dir, 'best_rnn_model.pt')))
+        test(model, test_loader)
+    else:
+        run()
