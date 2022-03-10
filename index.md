@@ -17,7 +17,8 @@ What is most concerning for the health of humans, however, is the ever-increasin
 As a result light exposure during unnatural times can detrimentally affect sleep, which is necessary for human health and function. Sleep deprivation or impairment can lead to many health issues such as impairment to cognition [6], metabolism [7], and immune response [8]. This leads to the focus of this project, which is to determine the effects of light exposure on sleep quality.
 
 ### Data
-The data used in this project comes from the Sueño Ancillary study done by The Hispanic Community Health Study / Study of Latinos (HCHS/SOL). The data is composed of wrist-worn actimetry sensor data taken over the course of one week for each participant (n=2252). Measurements are taken from the sensor in thirty second intervals and consist of blue, green, red and white light intensities, locomotor activity, time, and sleep interval indicators. One notable feature that we use is the interval indicator, which describes whether the patient is asleep, awake or resting for a given epoch. This uses the study’s sleep/wake detection algorithm to determine.
+The data used in this project comes from the Sueño Ancillary study done by The Hispanic Community Health Study / Study of Latinos (HCHS/SOL). The data is composed of wrist-worn actimetry sensor data taken over the course of one week for each participant (n=2252). Measurements are taken from the sensor in thirty-second intervals and consist of blue, green, red, and white light intensities, locomotor activity, time, and sleep interval indicators [9]. One notable feature that we use is the interval indicator, which describes whether the patient is asleep, awake or resting for a given epoch. This uses the study’s sleep/wake detection algorithm to determine.
+
 
 ![image](https://user-images.githubusercontent.com/46830657/157585465-e7683746-5a5c-4a01-a79f-d8ff56efaa51.png)
 
@@ -26,25 +27,15 @@ The outcome variable that we used for the data is sleep efficiency which is defi
 
 ![image](https://user-images.githubusercontent.com/46830657/156948066-09b1a1f8-c9bb-41da-8336-2f682d9a8e29.png)
 
+#### ROCKET Classifier
 
 
-### Documentations and Notes
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-Use the [editor on GitHub](https://github.com/GogoHYX/DSC180_sleep_apnea/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+#### LSTM(RNN)
 
 
 Github pages [documentation](https://docs.github.com/categories/github-pages-basics/)
 
 ### Bibliography
-[1]https://pubmed.ncbi.nlm.nih.gov/25845697/
 
-https://pubmed.ncbi.nlm.nih.gov/16494083/
-
-https://pubmed.ncbi.nlm.nih.gov/24501435/
-
-https://mhealth.jmir.org/2016/4/e125/
+TODOTODOTODOTODO
 
