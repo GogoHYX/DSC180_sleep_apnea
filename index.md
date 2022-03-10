@@ -19,7 +19,6 @@ As a result light exposure during unnatural times can detrimentally affect sleep
 ### Data
 The data used in this project comes from the Sueño Ancillary study done by The Hispanic Community Health Study / Study of Latinos (HCHS/SOL). The data is composed of wrist-worn actimetry sensor data taken over the course of one week for each participant (n=2252). Measurements are taken from the sensor in thirty-second intervals and consist of blue, green, red, and white light intensities, locomotor activity, time, and sleep interval indicators [9]. One notable feature that we use is the interval indicator, which describes whether the patient is asleep, awake or resting for a given epoch. This uses the study’s sleep/wake detection algorithm to determine.
 
-
 ![image](https://user-images.githubusercontent.com/46830657/157585465-e7683746-5a5c-4a01-a79f-d8ff56efaa51.png)
 
 ### Methods
@@ -28,7 +27,9 @@ The outcome variable that we used for the data is sleep efficiency which is defi
 ![image](https://user-images.githubusercontent.com/46830657/156948066-09b1a1f8-c9bb-41da-8336-2f682d9a8e29.png)
 
 #### ROCKET Classifier
+RandOm Convolutional KErnel Transform (ROCKET) involves creating features from time series using random convolutional kernels. For our practical use case, however, we use a ridge regression classifier. The ridge regression classifier is significantly faster than logistic regression on smaller datasets because it can make use of so-called generalized cross-validation to determine appropriate regularization. After performing feature engineering, it turned out that only about 13% of sleep events were of ‘Bad’ sleep quality. In the case of such imbalanced data labels, the usual accuracy metric would not be appropriate so instead we used recall with respect to "bad" sleep quality events. The table below shows our results for our baseline model, individual color models, and Vote models.
 
+![image](https://user-images.githubusercontent.com/46830657/157774015-4b75f0c5-7a9a-4289-ac11-bcbad85310e9.png)
 
 #### LSTM(RNN)
 
