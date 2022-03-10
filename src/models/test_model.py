@@ -2,7 +2,7 @@ import sys
 
 sys.path.insert(0, '../')
 
-from helper_functions import split_X_y, read_data, test_split
+from ..helper_functions import split_X_y, read_data, test_split
 import pickle
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import recall_score

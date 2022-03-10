@@ -1,0 +1,23 @@
+epoch:1
+train loss:0.8860316215034945, validation loss:0.8409206742420793
+epoch:2
+train loss:0.8631523204930971, validation loss:0.8368529794737697
+epoch:3
+train loss:0.8534768853362786, validation loss:0.8336639028663436
+epoch:4
+train loss:0.8476451623593577, validation loss:0.8311605759430677
+epoch:5
+train loss:0.8435782410559755, validation loss:0.8295499677956104
+epoch:6
+train loss:0.8404498381682414, validation loss:0.8274478844987849
+epoch:7
+train loss:0.837778277947332, validation loss:0.8261347161339861
+epoch:8
+train loss:0.8355760700633695, validation loss:0.8248182056471706
+epoch:9
+train loss:0.8334671872992487, validation loss:0.8245527198331224
+epoch:10
+train loss:0.8315569194943948, validation loss:0.8233621722273529
+test prediction acc:0.9294267224718686
+test classification acc:0.9825783972125436
+test classification recall:0.0
