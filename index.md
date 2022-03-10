@@ -34,6 +34,22 @@ The outcome variable that we used for the data is sleep efficiency which is defi
 
 
 ### Bibliography
+[1] Gaston, K. J., Bennie, J., Davies, T. W., &amp; Hopkins, J. (2013). The ecological impacts of nighttime light pollution: A mechanistic appraisal. Biological Reviews, 88(4), 912–927. https://doi.org/10.1111/brv.12036 
 
-TODOTODOTODOTODO
+[2] P. Cinzano, F. Falchi, C.D. Elvidge, The first World Atlas of the artificial night sky brightness, Monthly Notices of the Royal Astronomical Society, Volume 328, Issue 3, December 2001, Pages 689–707, https://doi.org/10.1046/j.1365-8711.2001.04882.x
+
+[3] Published by S. O'Dea, S. O. D. (2021, September 24). Number of mobile devices worldwide 2020-2025. Statista. Retrieved March 4, 2022, from https://www.statista.com/statistics/245501/multiple-mobile-device-ownership-worldwide/ 
+
+[4] Cable, J., Schernhammer, E., Hanlon, E. C., Vetter, C., Cedernaes, J., Makarem, N., Dashti, H. S., Shechter, A., Depner, C., Ingiosi, A., Blume, C., Tan, X., Gottlieb, E., Benedict, C., Van Cauter, E., &amp; St‐Onge, M. P. (2021). Sleep and circadian rhythms: Pillars of Health—a keystone symposia report. Annals of the New York Academy of Sciences, 1506(1), 18–34. https://doi.org/10.1111/nyas.14661 
+
+[5] Rahman SA, Flynn-Evans EE, Aeschbach D, Brainard GC, Czeisler CA, Lockley SW. Diurnal spectral sensitivity of the acute alerting effects of light. Sleep. 2014 Feb 1;37(2):271-81. doi: 10.5665/sleep.3396. PMID: 24501435; PMCID: PMC3900613.
+
+[6] Killgore, W. D. S. (2010). Effects of sleep deprivation on cognition. Progress in Brain Research, 105–129. https://doi.org/10.1016/b978-0-444-53702-7.00007-5 
+
+[7] Knutson, K. L., Spiegel, K., Penev, P., &amp; Van Cauter, E. (2007). The metabolic consequences of sleep deprivation. Sleep Medicine Reviews, 11(3), 163–178. https://doi.org/10.1016/j.smrv.2007.01.002 
+
+[8] Spiegel K, Sheridan JF, Van Cauter E. Effect of Sleep Deprivation on Response to Immunization. JAMA. 2002;288(12):1471–1472. doi:10.1001/jama.288.12.1469
+
+[9] Patel SR, Weng J, Rueschman M, Dudley KA, Loredo JS, Mossavar-Rahmani Y, Ramirez M, Ramos AR, Reid K, Seiger AN, Sotres-Alvarez D, Zee PC, Wang R. Reproducibility of a Standardized Actigraphy Scoring Algorithm for Sleep in a US Hispanic/Latino Population. Sleep. 2015 Sep 1;38(9):1497-503. 
+
 
