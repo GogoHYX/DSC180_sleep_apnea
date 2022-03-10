@@ -1,5 +1,5 @@
 # DSC180 Capstone Project
-
+## [Project Website](https://gogohyx.github.io/DSC180_sleep_apnea/)
 ### Build instructions
 
 In the home directory, running `python run.py --targets` builds the requisite files.
