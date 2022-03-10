@@ -33,8 +33,6 @@ The outcome variable that we used for the data is sleep efficiency which is defi
 #### LSTM(RNN)
 
 
-Github pages [documentation](https://docs.github.com/categories/github-pages-basics/)
-
 ### Bibliography
 
 TODOTODOTODOTODO
