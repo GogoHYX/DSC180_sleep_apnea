@@ -9,9 +9,9 @@ In the home directory, running `python run.py --targets` builds the requisite fi
 1. `features`: reads raw data files, builds features, joins the files, and stores the columns of resulting dataframe in different files under `data/out`.
 2. `model`: trains the voting models and saves them under `results/` directory. **RUNNING THIS TAKES A WHILE FOR THE FIRST TIME BECAUSE OF THE IMPORT STATEMENT. AFTER THAT IT'S INSTANTANEOUS.**
 3. `predict`: loads the saved models, makes predictions, stores them under `results/` directory, and also stores the model recall values in a `.txt` file.
-4. `test`: provides the functionality of `1` `2` and `3` targets combined, on the test raw data.
-5. `all`: provides the functionality of `1` `2` and `3` targets combined, on the real raw data
-6. `test_rnn` test the rnn model on a subset of test files and save the output under `data/out`.
+4. `test_rnn` test the rnn model on a subset of test files and save the output under `data/out`.
+5. `test`: provides the functionality of `1` `2` `3` and `4` targets combined, on the test raw data.
+6. `all`: provides the functionality of `1` `2` `3` and `4` targets combined, on the real raw data
 
 ### Directory Map
 
@@ -39,9 +39,9 @@ In the home directory, running `python run.py --targets` builds the requisite fi
     
     b. `out/`: contains the data after feature generation.
     
-3. `notebooks/`: notebooks with some EDA and experimentation. This will later contain nicely formatted plots and associated analyses.
-4. `references/`: this will contain acknowledgement for any models or results that we use to build our project off of.
-5. `results/`: running the build script populates this directory with the trained models (`.pkl`) and a `.txt` file which outlines the model performance.
+3. `notebooks/`: notebooks with some EDA and experimentation.
+4. `references/`: this contains acknowledgement for any models or results that we use to build our project off of.
+5. `results/`: running the build script populates this directory with the trained models (`.pkl`) and a `.txt` file which outlines the model performance. The `actual/` directory has the results of our actual model. The 'test/' directory will be created on running the `test` target and will contain results of our model on the test data.
 6. `src/`: contains all the script `.py` files.
     
     a. `features/`: `build_features.py` performs feature engineering on clean data and populates `data/out` with files that can be used to train and test the models.
