@@ -9,7 +9,8 @@ import os
 
 def train(data_dir, model_save_path, train_prop):
 
-    os.makedirs(model_save_path)
+    if not os.path.exists(model_save_path):
+        os.makedirs(model_save_path)
     
     train_df = train_split(read_data(data_dir), train_prop)
     train_X, train_y = split_X_y(train_df)
