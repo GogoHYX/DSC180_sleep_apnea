@@ -18,8 +18,10 @@ def create_features(raw_df):
 
     df['interval_num'] = df.interval.replace({'ACTIVE': 3, 'REST': 1, 'REST-S': 0}) # so the differences are unique
 
+    df['lines'] = range(1, df.shape[0] + 1)
+
     epochs_in_each_interval = (df.loc[df.interval_num.diff() != 0, :] # epochs where state changed
-                               .line
+                               .lines
                                .diff()) # number of epochs in each state, starting from active
 
     # interval_epochs eventually contains 1) indicies where state changes, 2) what interval starts at that epoch,  
