@@ -26,12 +26,14 @@ The outcome variable that we used for the data is sleep efficiency which is defi
 
 ![image](https://user-images.githubusercontent.com/46830657/156948066-09b1a1f8-c9bb-41da-8336-2f682d9a8e29.png)
 
+#### LSTM(RNN)
+
+Long Short-Term Memory(LSTM) is a recurrent neurual network(RNN) which fixed the long term denpendency lost problem of traditional RNN. We trained the model by passing the light intensity with 30-second second and try to predict whether the patient is asleep, awake or in bed but not asleep. With the predicted sleep-wake status, we can calculate the sleep efficiency and classify whether the the sleep quality is good or bad. The prediction accuracy of the sleep-wake status is 92% and thus the classification accuracy is 98%. However, the high accuracy is result from the highly skewed data. Most of the sleep in the data is of good quality. With the Recall with respect to bad-quality sleep to be 0, this is not a good model for our prediction task, as we value more of the ability of correctly identify the bad quality sleep.
+
 #### ROCKET Classifier
 RandOm Convolutional KErnel Transform (ROCKET) involves creating features from time series using random convolutional kernels. For our practical use case, however, we use a ridge regression classifier. The ridge regression classifier is significantly faster than logistic regression on smaller datasets because it can make use of so-called generalized cross-validation to determine appropriate regularization. After performing feature engineering, it turned out that only about 13% of sleep events were of ‘Bad’ sleep quality. In the case of such imbalanced data labels, the usual accuracy metric would not be appropriate so instead we used recall with respect to "bad" sleep quality events. The table below shows our results for our baseline model, individual color models, and Vote models.
 
 ![image](https://user-images.githubusercontent.com/46830657/157774015-4b75f0c5-7a9a-4289-ac11-bcbad85310e9.png)
-
-#### LSTM(RNN)
 
 
 ### Bibliography
