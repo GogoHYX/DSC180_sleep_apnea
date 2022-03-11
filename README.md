@@ -33,7 +33,9 @@ In the home directory, running `python run.py --targets` builds the requisite fi
     h. `data-params.json`: config file for cleaning current data.
 
 2. `data/`: contains the raw data files and data files after feature engineering. 
+
     a. `raw/`: contains the raw data files downloaded from source. _Does not include anything in the repo because raw data is confidential_. 
+    
     b. `out/`: contains the data after feature generation.
     
 3. `notebooks/`: notebooks with some EDA and experimentation. This will later contain nicely formatted plots and associated analyses.
