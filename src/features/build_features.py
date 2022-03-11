@@ -86,6 +86,7 @@ def build_features(data_dir, outpath):
     concat_df = concat_df.reset_index(drop = True)
     concat_df = concat_df.loc[concat_df.dim_white.apply(lambda x: len(x)) >= 240].reset_index(drop = True)
     
-    os.makedirs(outpath)
+    if not os.path.exists(outpath):
+        os.makedirs(outpath)
 
     save_data(concat_df, outpath)
