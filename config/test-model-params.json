@@ -1,0 +1,5 @@
+{
+    "data_dir": "data/out",
+    "model_save_path": "results/test/",
+    "train_prop": 0.75
+}

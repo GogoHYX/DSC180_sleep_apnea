@@ -1,8 +1,0 @@
-
-{
-    "file": "test/testdata/0000",
-    "outdir": "data/report",
-    "signals": ["SaO2", "AIRFLOW", "PR", "ECG"],
-    "events": ["Hyp", "Ob.A", "Cn.A"],
-    "colors": ["go", "ro", "yo"]
-}

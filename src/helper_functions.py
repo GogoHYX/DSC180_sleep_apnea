@@ -2,6 +2,7 @@ import os
 import json
 import pandas as pd
 import numpy as np
+from collections import Counter
 
 def split_X_y(df):
     '''Split X features and y outcome.'''
@@ -42,6 +43,12 @@ def read_data(in_path):
             c += 1
             
     return df
+
+def vote(lst):
+    '''Returns the result of voting'''
+
+    data = Counter(lst[::-1])
+    return max(lst[::-1], key=data.get)
 
 def train_split(df, train_prop):
     '''Returns train split based on train_prop''' 
