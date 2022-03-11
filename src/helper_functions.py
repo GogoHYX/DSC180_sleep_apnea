@@ -15,7 +15,7 @@ def save_data(df, outpath):
     
     for k, v in df_dict.items():
         if k.startswith("dim"): # dim cols are saved as .json
-            with open(os.path.join(outpath, k+".json"), 'w') as outfile:
+            with open(os.path.join(outpath, k+".json"), 'w+') as outfile:
                       json.dump(v.to_json(), outfile)
         else: # sleep eff columns are saved as csv
             v.to_csv(os.path.join(outpath, k+".csv"), index = False)
