@@ -74,8 +74,8 @@ def main(targets):
         if os.path.exists('data'):
             shutil.rmtree('data')
 
-        if os.path.exists('results'):
-            shutil.rmtree('results')
+        if os.path.exists('results/test'):
+            shutil.rmtree('results/test')
 
 
 
