@@ -22,7 +22,7 @@ def save_data(df, outpath):
 def read_data(in_path):
     '''Reads the separate json/csv files into one df'''
     
-    all_files = os.listdir(in_path)
+    all_files = sorted(os.listdir(in_path))
     
     df = pd.DataFrame()
     

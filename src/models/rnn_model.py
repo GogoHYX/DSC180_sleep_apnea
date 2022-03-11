@@ -226,7 +226,9 @@ def test(model, test_loader):
     avg_cla_acc = np.mean(cla_acc_lst)
     print('test prediction acc:{0}'.format(avg_acc))
     print('test classification acc:{0}'.format(avg_cla_acc))
-    with open(log_file_dir, 'a') as f:
+    if not os.path.exists(log_file_dir):
+        os.makedirs(log_file_dir)
+    with open(log_file_dir + "rnn_result.txt", 'w+') as f:
         f.write('test prediction acc:{0}\n'.format(avg_acc))
         f.write('test classification acc:{0}\n'.format(avg_cla_acc))
 
