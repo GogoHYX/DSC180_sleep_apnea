@@ -5,8 +5,11 @@ sys.path.insert(0, '../')
 from helper_functions import split_X_y, read_data, train_split
 from sktime.classification.kernel_based import RocketClassifier
 import pickle
+import os
 
 def train(data_dir, model_save_path, train_prop):
+
+    os.makedirs(model_save_path)
     
     train_df = train_split(read_data(data_dir), train_prop)
     train_X, train_y = split_X_y(train_df)

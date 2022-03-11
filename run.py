@@ -3,6 +3,7 @@
 import sys
 import os
 import json
+import shutil
 
 sys.path.insert(0, 'src')
 sys.path.insert(0, 'src/features')
@@ -68,6 +69,13 @@ def main(targets):
             
         train(**model_cfg)
         test(**model_cfg)
+
+    if 'clean' in targets:
+        if os.path.exists('data'):
+            shutil.rmtree('data')
+
+        if os.path.exists('results'):
+            shutil.rmtree('results')
 
 
 
