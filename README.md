@@ -11,6 +11,7 @@ In the home directory, running `python run.py --targets` builds the requisite fi
 3. `predict`: loads the saved models, makes predictions, stores them under `results/` directory, and also stores the model recall values in a `.txt` file.
 4. `test`: provides the functionality of `1` `2` and `3` targets combined, on the test raw data.
 5. `all`: provides the functionality of `1` `2` and `3` targets combined, on the real raw data
+6. `test_rnn` test the rnn model on a subset of test files and save the output under `data/out`.
 
 ### Directory Map
 
@@ -30,7 +31,7 @@ In the home directory, running `python run.py --targets` builds the requisite fi
 
     g. `test-model-params.json`: config file for test model parameters.
     
-    h. `data-params.json`: config file for cleaning current data.
+    h. `test-rnn-params.json`: config file for testing rnn model.
 
 2. `data/`: contains the raw data files and data files after feature engineering. 
 

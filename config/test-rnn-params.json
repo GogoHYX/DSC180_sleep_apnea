@@ -1,0 +1,5 @@
+{
+    "out_dir": "data/out/rnn_result.txt",
+    "test_data_dir" : "test/testdata",
+    "model_path" : "logs/best_rnn_model.pt"
+}

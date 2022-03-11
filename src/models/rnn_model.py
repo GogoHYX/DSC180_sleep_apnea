@@ -221,18 +221,31 @@ def test(model, test_loader):
             cla_acc = is_quality_sleep(pred) == is_quality_sleep(y)
             acc_lst.append(acc)
             cla_acc_lst.append(cla_acc.cpu())
+            # print('y: '+ str(y) + 'pred: '+ str(pred))
     avg_acc = np.mean(acc_lst)
     avg_cla_acc = np.mean(cla_acc_lst)
     print('test prediction acc:{0}'.format(avg_acc))
     print('test classification acc:{0}'.format(avg_cla_acc))
     with open(log_file_dir, 'a') as f:
-        f.write('test prediction acc:{0}'.format(avg_acc))
-        f.write('test classification acc:{0}'.format(avg_cla_acc))
+        f.write('test prediction acc:{0}\n'.format(avg_acc))
+        f.write('test classification acc:{0}\n'.format(avg_cla_acc))
 
 
 def run(): 
     train_loader, val_loader, test_loader = prepare_dataset()
     model = train(train_loader, val_loader)
+    test(model, test_loader)
+
+def test_rnn(config):
+    global data_dir
+    global log_file_dir
+    log_file_dir = config['out_dir']
+    data_dir = config['test_data_dir']
+    files = os.listdir(data_dir)
+    test_set = HCHS(files)
+    test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=True)
+    model = RNN().to(device)
+    model.load_state_dict(torch.load(config['model_path'], map_location=torch.device(device)))
     test(model, test_loader)
 
 

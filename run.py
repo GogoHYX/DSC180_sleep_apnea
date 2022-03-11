@@ -12,6 +12,7 @@ sys.path.insert(0, 'src/models')
 from build_features import build_features
 from train_model import train
 from test_model import test
+import rnn_model
 
 
 def main(targets):
@@ -69,6 +70,12 @@ def main(targets):
             
         train(**model_cfg)
         test(**model_cfg)
+
+    if 'test_rnn' in targets:
+        with open('config/test-rnn-params.json') as fh:
+            test_rnn_cfg = json.load(fh)
+        print('test rnn')
+        rnn_model.test_rnn(test_rnn_cfg)
 
     if 'clean' in targets:
         if os.path.exists('data'):
